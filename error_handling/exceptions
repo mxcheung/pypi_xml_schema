@@ -9,3 +9,6 @@ https://pypi.org/project/xmlschema/
 
 # Convert the XML document to a string
 xml_string = message.toxml()
+
+# Print the XML string to the console
+print(xml_string)
