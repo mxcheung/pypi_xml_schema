@@ -1,0 +1,3 @@
+failed validating <Element '{urn:iso:std:iso:20022:tech:xsd:camt.057.001.07}Ntfctn' at 0x000001BEAFB51360> with XsdGroup(model='sequence', occurs=[1, 1]):
+
+Reason: Unexpected child with tag '{urn:iso:std:iso:20022:tech:xsd:camt.057.001.07}Itm' at position 5. Tag 'Itm' expected.
