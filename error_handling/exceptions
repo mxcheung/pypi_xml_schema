@@ -6,3 +6,6 @@ message_dict.update(self._get_iso20022_dict())
 message = message_schema.encode(message_dict)
 
 https://pypi.org/project/xmlschema/
+
+# Convert the XML document to a string
+xml_string = message.toxml()
