@@ -4,3 +4,5 @@ Reason: Unexpected child with tag '{urn:iso:std:iso:20022:tech:xsd:camt.057.001.
 
 message_dict.update(self._get_iso20022_dict())
 message = message_schema.encode(message_dict)
+
+https://pypi.org/project/xmlschema/
