@@ -1,0 +1,24 @@
+{XMLSchemaChildrenValidationError}failed validating <Element '{urn:swift:saa:xsd:saa.2.0}DataPDU' at 0x00000298FFE64770> with XsdGroup(model='sequence', occurs=[1, 1]):
+
+Reason: The content of element '{urn:swift:saa:xsd:saa.2.0}DataPDU' is not complete.
+
+Schema:
+
+  <xs:complexType xmlns:xs="http://www.w3.org/2001/XMLSchema" name="DataPDU">
+      <xs:sequence>
+          <xs:element name="Revision" type="xs:string" fixed="2.0.10" />
+          <xs:element name="Header" type="Header" />
+      </xs:sequence>
+  </xs:complexType>
+
+Instance:
+
+  <DataPDU xmlns="urn:swift:saa:xsd:saa.2.0">
+      <Revision>2.0.10</Revision>
+      <Header>
+          <Message>
+              <SenderReference>2.0.1711</SenderReference>
+          </Message>
+      </Header>
+  </DataPDU>
+
