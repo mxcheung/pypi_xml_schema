@@ -1,0 +1,26 @@
+import xml.etree.ElementTree as ET
+
+# Example XML string with namespace
+xml_string = '''
+<root xmlns:ns="http://example.com">
+    <ns:item>This is the original value</ns:item>
+</root>
+'''
+
+# Parse the XML string
+root = ET.fromstring(xml_string)
+
+# Define namespace prefix
+ns = {'ns': 'http://example.com'}
+
+# Find the element you want to replace the value of
+item_element = root.find('ns:item', ns)
+
+# Replace the value of the element
+item_element.text = 'This is the new value'
+
+# Convert the modified XML tree back to a string
+modified_xml_string = ET.tostring(root).decode()
+
+print("Modified XML string:")
+print(modified_xml_string)
