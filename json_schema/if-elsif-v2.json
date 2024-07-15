@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "a": {
+      "type": "string"
+    },
+    "b": {
+      "type": "string"
+    }
+  },
+  "required": ["a", "b"],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "a": { "type": "string", "maxLength": 0 },
+          "b": { "type": "string", "maxLength": 0 }
+        },
+        "required": ["a", "b"]
+      },
+      "then": {
+        "errorMessage": "Both 'a' and 'b' must be filled if they are empty."
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "a": { "type": "string", "maxLength": 0 }
+        },
+        "required": ["a"]
+      },
+      "then": {
+        "required": ["a"],
+        "errorMessage": "'a' must be filled."
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "b": { "type": "string", "maxLength": 0 }
+        },
+        "required": ["b"]
+      },
+      "then": {
+        "required": ["b"],
+        "errorMessage": "'b' must be filled."
+      }
+    }
+  ]
+}
