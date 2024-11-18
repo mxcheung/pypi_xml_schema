@@ -29,3 +29,9 @@ Instance:
                           'OrdQty': {'@Qty': '100'},
                           'Price': {'@Prx': '150.00'}}}}
 ```
+
+
+```
+# Encode the dictionary using the correct path
+xml_element = schema.encode(fixml_order, path="FIXML/Order")
+```
